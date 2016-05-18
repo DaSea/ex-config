@@ -1,4 +1,6 @@
-exec 'AirlineTheme kolor'
+if exists(":AirlineTheme")
+    exec 'AirlineTheme kolor'
+endif
 
 " ex
 " =============================
