@@ -26,16 +26,16 @@ if &background == "dark"
 
     hi clear EX_HL_label1
     " hi EX_HL_label1 gui=none guibg=lightblue term=none cterm=none ctermbg=lightblue
-    hi EX_HL_label1 gui=none guifg=black guibg=lightblue term=none cterm=none ctermbg=lightblue
+    hi EX_HL_label1 gui=none guifg=black guibg=lightblue term=none cterm=none ctermfg=black ctermbg=lightblue
 
     hi clear EX_HL_label2
-    hi EX_HL_label2 gui=none guifg=black guibg=lightmagenta term=none cterm=none ctermbg=darkmagenta
+    hi EX_HL_label2 gui=none guifg=black guibg=lightmagenta term=none cterm=none ctermfg=black ctermbg=darkmagenta
 
     hi clear EX_HL_label3
-    hi EX_HL_label3 gui=none  guifg=black guibg=darkyellow term=none cterm=none ctermbg=darkyellow
+    hi EX_HL_label3 gui=none  guifg=black guibg=darkyellow term=none cterm=none ctermfg=black ctermbg=darkyellow
 
     hi clear EX_HL_label4
-    hi EX_HL_label4 gui=none guifg=black guibg=darkgreen term=none cterm=none ctermbg=darkgreen
+    hi EX_HL_label4 gui=none guifg=black guibg=darkgreen term=none cterm=none ctermfg=black ctermbg=darkgreen
 
     " ex-showmarks highlight
     " =============================
