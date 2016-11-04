@@ -59,7 +59,7 @@ function exconfig#apply()
     let g:exvim_project_name = project_name
 
     let s:old_titlestring=&titlestring
-    set titlestring=%{g:exvim_project_name}:\ %t\ (%{expand(\"%:p:.:h\")}/)
+    set titlestring=%{g:exvim_project_name}:\%t\(%{expand(\"%:p:h\")}/)
 
     " create folder .exvim.xxx/ if not exists
     let path = g:exvim_folder
