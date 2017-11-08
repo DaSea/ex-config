@@ -52,7 +52,11 @@ function exconfig#apply()
     let g:exvim_project_name = project_name
     let g:exvim_project_root = cwd
     " let g:exvim_folder = './.exvim.'.project_name
-    let g:exvim_folder = './.exvim'
+    let g:exvim_folder = './.exvimlinux'
+    if ex#os#is_windows()
+        let g:exvim_folder = './.exvimwin'
+    endif
+
 
     " set parent working directory
     silent exec 'cd ' . fnameescape(cwd)
@@ -483,7 +487,7 @@ function exconfig#gen_sh_update_ctags(path)
     endif
 
     " get ctags options
-    let ctags_optioins = '--fields=+iaS --extra=+q'
+    let ctags_optioins = '--fields=+iaS --extras=+q'
 
     " generate scripts
     if ex#os#is('windows')
@@ -870,14 +874,14 @@ function exconfig#update_exvim_files()
         let shell_pause = ' && pause'
         let suffix = '.bat'
         " let path = '.\.exvim.'.g:exvim_project_name.'\'
-        let path = '.\.exvim\'
+        let path = '.\.exvimwin\'
     else
         let shell_exec = 'sh'
         let shell_and = ' && '
         let shell_pause = ''
         let suffix = '.sh'
         " let path = './.exvim.'.g:exvim_project_name.'/'
-        let path = './.exvim/'
+        let path = './.exvimlinux/'
     endif
 
     let cmd = ''
